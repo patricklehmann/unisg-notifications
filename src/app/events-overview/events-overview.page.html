@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>events-overview</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<p>
+		Anbinden der Daten von
+		<a href="https://squibble.me/api/v2/public/patricklehmann-punkt-ch-photography/photography/galleries" target="_blank">
+			squibble.me/api/v2/public/patricklehmann-punkt-ch-photography/photography/galleries
+		</a>
+	</p>
+
+	<ion-content>
+
+		<ion-card *ngFor="let gallery of galleries">
+			<ion-img [src]="gallery.preview.url.preserve__1200"></ion-img>
+			<ion-card-header>
+				<ion-card-title>{{gallery.label}}</ion-card-title>
+			</ion-card-header>
+			<ion-card-content>
+				<p *ngIf="!gallery.description_short == ''">{{gallery.description_short}}</p>
+				<p>{{gallery.point_of_time | date}}</p>
+			</ion-card-content>
+		</ion-card>
+	</ion-content>
+</ion-content>

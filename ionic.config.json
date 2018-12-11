@@ -1,6 +1,8 @@
 {
   "name": "unisg-notifications",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "619132ae"
 }
